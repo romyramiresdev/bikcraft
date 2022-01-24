@@ -1,16 +1,15 @@
 .container {
+  box-sizing: border-box;
   max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
 }
 
 .botao {
-  padding: 16px 32px;
-  background: blue;
   display: inline-block;
+  padding: 16px 32px;
   background: linear-gradient(#ffbf00, #f2a50c);
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -18,6 +17,8 @@
   color: var(--cor-p5);
   font: 600 1.125rem/1.35 "Poppins", sans-serif;
   max-width: max-content;
+  border: none;
+  cursor: pointer;
 }
 
 .botao:hover {
@@ -48,7 +49,7 @@
   transition: transform 0.2s;
 }
 
-.botao.seta:hover:after {
+.botao.seta:hover::after {
   transform: translateX(4px);
 }
 
@@ -78,11 +79,15 @@
   color: var(--cor-0);
 }
 
-/* titulos internos */
+/* titulo internas */
 .titulo-bg {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--cor-11);
+}
+
+.titulo {
+  background: url("../../img/dec/top-right.svg") no-repeat top right 20px;
 }
 
 .titulo p {
